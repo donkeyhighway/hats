@@ -4,7 +4,7 @@ body {
 }
 
 td {
-  font-size: 1.2em;
+  font-size: .85em;
 }
 
 a {
@@ -36,7 +36,7 @@ table {
   color: white;
   padding: .25em;
   border: 1px solid black;
-  width: 5em;
+  width: 10em;
 }
 
 td.greenHat {
@@ -44,7 +44,7 @@ td.greenHat {
   color: white;
   padding: .25em;
   border: 1px solid black;
-  width: 5em;
+  width: 10em;
 }
 
 div.blackHat {
@@ -59,7 +59,7 @@ div.blackHat {
   background-color: yellow;
   padding: .25em;
   border: 1px solid black;
-  width: 5em;
+  width: 10em;
 }
 
 #nextLink {
