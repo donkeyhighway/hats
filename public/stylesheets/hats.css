@@ -1,0 +1,73 @@
+body {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+td {
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: underline;
+  color: black;
+}
+
+a:visited {
+  text-decoration: underline;
+  color: black;
+}
+
+table {
+  margin: auto;
+}
+
+.delete {
+  float: right;
+}
+
+.delete a {
+  text-decoration: none;
+  font-size: .5em;
+  color: red;
+}
+
+.blackHat {
+  background-color: black;
+  color: white;
+  padding: .25em;
+  border: 1px solid black;
+  width: 5em;
+}
+
+td.greenHat {
+  background-color: green;
+  color: white;
+  padding: .25em;
+  border: 1px solid black;
+  width: 5em;
+}
+
+div.blackHat {
+  font-size: 2em;
+  margin: auto;
+  margin-top: 2em;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.yellowHat {
+  background-color: yellow;
+  padding: .25em;
+  border: 1px solid black;
+  width: 5em;
+}
+
+#nextLink {
+  float: right;
+  margin-top: 2em;
+}
+
+input.greenHat {
+  font-size: 2em;
+  color: green;
+}

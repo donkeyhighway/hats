@@ -1,0 +1,47 @@
+<table id="blackhats">
+  <% (0...5).each do |row| %>
+    <tr>
+    <% (0...10).each do |col| %>
+      <% index = (row*10) + col %>
+      <% if @hats[index] %>
+        <td class="blackHat">
+          <%= h @hats[index] %>
+        </td>
+      <% else %>
+        <td>&nbsp;</td>
+      <% end %>
+    <% end %>
+    </tr>
+
+    <tr>
+    <% (0...10).each do |col| %>
+      <% index = (row*10) + col %>
+      <% if @greens[index] %>
+        <td class="greenHat">
+          <%= h @greens[index] %>
+        </td>
+      <% else %>
+        <td>&nbsp;</td>
+      <% end %>
+    <% end %>
+    </tr>
+
+  <% end %>
+</table>
+
+<table id="yellowhats">
+  <% (0...5).each do |row| %>
+    <tr>
+    <% (0...10).each do |col| %>
+      <% index = (row*10) + col %>
+      <% if @yellows[index] %>
+        <td class="yellowHat">
+          <%= h @yellows[index] %>
+        </td>
+      <% else %>
+        <td>&nbsp;</td>
+      <% end %>
+    <% end %>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,30 @@
+
+<div class="blackHat">
+  <%= @hat.body %>
+</div>
+
+<br/>
+
+<%= form_tag(:action => :answer, :id => @hat.id) %>
+  <input type="text" name="black_hat[green_hat]" id="black_hat_green_hat" class="greenHat" value="<%= @hat.green_hat || 'green hat' %>"/><br/>
+  <input type="text" name="black_hat[owner]" id="black_hat_owner" class="greenHat" value="<%= @hat.owner || 'owner' %>"/><br/><br/>
+  <%= submit_tag "Fix!", :style => "font-size: 10em;" %>
+</form>
+
+<script type="text/javascript">
+  $(function() {
+    $('#black_hat_green_hat').click(function() {
+      if($(this).val() == 'green hat') {
+        $(this).val('');
+      }
+    });
+    
+    $('#black_hat_owner').focus(function() {
+      if($(this).val() == 'owner') {
+        $(this).val('');
+      }
+    });
+
+    $('#black_hat_green_hat').focus();
+  });
+</script>

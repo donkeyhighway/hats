@@ -1,0 +1,31 @@
+<%= form_tag({:controller => :yellow_hat, :action => :create}, {:style => "margin-left: 1em;"}) %>
+<%= text_field :yellow_hat, :body, :style => "font-size: 1em;" %>
+<%= submit_tag "Add Yellow!", :style => "font-size: 1em;" %>
+</form>
+
+<table id="yellowhats">
+  <% (0...5).each do |row| %>
+    <tr>
+    <% (0...10).each do |col| %>
+      <% index = (row*10) + col %>
+      <% if @hats[index] %>
+        <td class="yellowHat">
+          <%= h @hats[index] %>
+        </td>
+      <% else %>
+        <td>&nbsp;</td>
+      <% end %>
+    <% end %>
+    </tr>
+  <% end %>
+</table>
+
+<div id="nextLink">
+  <%= link_to "Black Hats!", :action => :black_hats %>
+</div>
+
+<script type="text/javascript">
+  $(function() {
+    $('#yellow_hat_body').focus();
+  });
+</script>

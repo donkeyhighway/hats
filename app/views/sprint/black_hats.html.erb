@@ -1,0 +1,49 @@
+<%= form_tag({:controller => :black_hat, :action => :create}, {:style => "margin-left: 1em;"}) %>
+<%= text_field :black_hat, :body, :style => "font-size: 1em;" %>
+<%= submit_tag "Add Black!", :style => "font-size: 1em;" %>
+</form>
+
+<table id="blackhats">
+  <% (0...5).each do |row| %>
+    <tr>
+    <% (0...10).each do |col| %>
+      <% index = (row*10) + col %>
+      <% if @hats[index] %>
+        <td class="blackHat">
+          <%= h @hats[index] %>
+          <span class="delete">
+            <%= link_to "X", :controller => :black_hat, :action => :destroy, :id => @hats[index].id %>
+          </span>
+        </td>
+      <% else %>
+        <td>&nbsp;</td>
+      <% end %>
+    <% end %>
+    </tr>
+
+    <tr>
+    <% (0...10).each do |col| %>
+      <% index = (row*10) + col %>
+      <% if @greens[index] %>
+        <td class="greenHat">
+          <%= h @greens[index] %>
+        </td>
+      <% else %>
+        <td>&nbsp;</td>
+      <% end %>
+    <% end %>
+    </tr>
+  <% end %>
+</table>
+
+<div id="nextLink">
+  <% if BlackHat.first %>
+  <%= link_to "Green Hats!", :controller => :black_hat, :action => :ponder, :id => BlackHat.first.id %>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  $(function() {
+    $('#black_hat_body').focus();
+  });
+</script>
